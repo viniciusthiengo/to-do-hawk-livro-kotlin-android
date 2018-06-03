@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="18dp">
+
+    <ImageView
+        android:id="@+id/iv_ic_priority"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/description_ic_priority" />
+
+    <ImageView
+        android:id="@+id/iv_ic_date"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignTop="@+id/iv_ic_priority"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/iv_ic_priority"
+        android:layout_toRightOf="@+id/iv_ic_priority"
+        android:contentDescription="@string/description_ic_date"
+        android:src="@drawable/ic_date" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_ic_date"
+        android:layout_toEndOf="@+id/iv_ic_date"
+        android:layout_toRightOf="@+id/iv_ic_date"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_ic_priority"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/iv_ic_duration"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/tv_task"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/description_ic_time"
+        android:src="@drawable/ic_duration" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_ic_duration"
+        android:layout_toEndOf="@+id/iv_ic_duration"
+        android:layout_toRightOf="@+id/iv_ic_duration"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <CheckBox
+        android:id="@+id/cb_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_task"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/checkbox_round_corner"
+        android:padding="5dp"
+        android:text="@string/label_done"
+        android:textColor="@color/colorDarkGrey"
+        android:textSize="16sp" />
+</RelativeLayout>
