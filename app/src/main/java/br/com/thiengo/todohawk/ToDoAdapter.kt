@@ -44,11 +44,11 @@ class ToDoAdapter(
             RecyclerView.ViewHolder(itemView),
             CompoundButton.OnCheckedChangeListener {
 
-        var ivPriority: ImageView
-        var tvDate: TextView
-        var tvTask: TextView
-        var tvDuration: TextView
-        var cbDone: CheckBox
+        val ivPriority: ImageView
+        val tvDate: TextView
+        val tvTask: TextView
+        val tvDuration: TextView
+        val cbDone: CheckBox
 
         init {
             ivPriority = itemView.findViewById(R.id.iv_ic_priority)

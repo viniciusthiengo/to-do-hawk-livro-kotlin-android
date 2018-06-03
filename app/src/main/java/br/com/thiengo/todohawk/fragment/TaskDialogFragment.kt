@@ -44,7 +44,7 @@ class TaskDialogFragment :
 
 
     /*
-     * SOMENTE PARA A DEFINIÇÃO DO LAYOUT DO DIALOGFRAGMENT
+     * SOMENTE PARA A DEFINIÇÃO DO LAYOUT DO DialogFragment
      * */
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -58,11 +58,11 @@ class TaskDialogFragment :
 
     /*
      * PARA QUE SEJA POSSÍVEL ACESSAR AS VIEWS COM A SINTAXE
-     * PERMITIDA PELO KOTLIN-ANDROID-EXTENSIONS, TEMOS DE
+     * PERMITIDA PELO kotlin-android-extensions, TEMOS DE
      * UTILIZAR O onResume() NO DIALOG OU QUALQUER OUTRO
      * MÉTODO DO CICLO DE VIDA DO FRAGMENT QUE VENHA DEPOIS
      * DE onCreateView(), POIS CASO CONTRÁRIO, MESMO ACESSANDO
-     * A VIEW EM onCreateView(), SERÁ GERADA UMA NULLPOINTEREXCEPTION.
+     * A VIEW EM onCreateView(), SERÁ GERADA UMA NullPointerException.
      * ISSO, POIS O LAYOUT AINDA NÃO FOI INICIALIZADO.
      * */
     override fun onResume() {
@@ -75,11 +75,11 @@ class TaskDialogFragment :
     /*
      * PARA QUE SEJA CRIADO UM NOVO OBJETO ToDo E ENTÃO SEJA
      * ELE ENVIADO A LISTA DE ITENS VINCULADOS AO ADAPTER DO
-     * RECYCLERVIEW DA MainActivity.
+     * RecyclerView DA MainActivity.
      * */
     override fun onClick(view: View?) {
         /*
-         * CONVERSÃO DE DADOS DE DATA EM STRING PARA MILLISECONDS.
+         * CONVERSÃO DE DADOS DE DATA EM String PARA MILLISECONDS.
          * */
         val calendar = Calendar.getInstance()
         calendar.set(
@@ -174,7 +174,7 @@ class TaskDialogFragment :
 
 
     /*
-     * SOBRESCRITA OBRIGATÓRIO DE MÉTODO DEVIDO A IMPLEMENTAÇÃO DA
+     * SOBRESCRITA OBRIGATÓRIA DE MÉTODO DEVIDO A IMPLEMENTAÇÃO DA
      * INTERFACE OnItemSelectedListener. PORÉM O MÉTODO NÃO É UTILIZADO.
      * */
     override fun onNothingSelected(p0: AdapterView<*>?) {}
